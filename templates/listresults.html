@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Test Name</td>
+                <td>Test Result</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h2><a href="/">Go back to home page</a></h2>
+</body>
+</html>

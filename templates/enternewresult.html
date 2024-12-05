@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <form action="{{ url_for('enternewresult') }}" method='POST'>
+        <h3>Test Result Information</h3>
+
+        <label for="uid">User Id</label><br>
+        <input type="text" id="uid" name="UserId"><br>
+
+        <label for="tname">Test Name</label><br>
+        <input type="text" id="tname" name="TestName"><br>
+
+        <label for="tresult">Test Result</label><br>
+        <input type="text" id="tresult" name="TestResult"><br>
+
+        <input type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>

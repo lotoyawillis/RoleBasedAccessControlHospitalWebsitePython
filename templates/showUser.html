@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hospital App User Information</h1>
+    <table>
+        <tbody>
+        {% if row %}
+        <tr>
+            <td>Name: {{row[0]}}</td>
+        </tr>
+        <tr>
+            <td>Age: {{row[1]}}</td>
+        </tr>
+        <tr>
+            <td>Phone Number: {{row[2]}}</td>
+        </tr>
+        <tr>
+            <td>Has COVID: {{row[3]}}</td>
+        </tr>
+        <tr>
+            <td>Security Role Level: {{row[4]}}</td>
+        </tr>
+        <tr>
+            <td>Login Password: {{row[5]}}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+    <h2><a href="/">Go back to home page</a></h2>
+</body>
+</html>

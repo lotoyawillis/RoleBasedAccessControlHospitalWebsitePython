@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% with msgs = get_flashed_messages() %}
+         {% if msgs %}
+            <ul>
+                {% for msg in msgs %}
+                <li>{{msg}}<br></li>
+                {% endfor %}}
+            </ul>
+         {% endif %}}
+    {% endwith %}
+
+    {% if session['logged_in'] %}
+        <h1>Welcome {{name}}</h1>
+        <h2><a href="/showuser">Show Hospital App User</a></h2>
+        <h2><a href="/listresults">List Test Results</a></h2>
+            {% if session['Level2'] or session['Level3'] %}
+                <h2><a href="/enternew">Add new Hospital App User</a></h2>
+                <h2><a href="/enternewresult">Send a Test Result</a></h2>
+            {% endif %}
+            {% if session['Level3'] %}
+                <h2><a href="/list">List Hospital App Users</a></h2>
+            {% endif %}
+        <h2><a href="/logout">Log out</a></h2>
+    {% endif %}
+</body>
+</html>
